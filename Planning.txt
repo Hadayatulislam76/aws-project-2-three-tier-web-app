@@ -1,0 +1,24 @@
+VPC (10.0.0.0/16)
+
+├── Public Subnet (10.0.1.0/24)
+│     └── Load Balancer
+│
+├── Private Subnet 1 (10.0.2.0/24)
+│     └── EC2 (App)
+│
+└── Private Subnet 2 (10.0.3.0/24)
+      └── RDS (Database)
+
+project-2-public-subnet      10.0.1.0/24   eu-central-1a
+project-2-private-app-subnet 10.0.2.0/24   eu-central-1a
+project-2-private-db-subnet  10.0.3.0/24   eu-central-1a
+
+
+User
+  ↓
+Application Load Balancer (Public Subnet)
+  ↓
+EC2 (Private Subnet)
+  ↓
+RDS (Private Subnet)
+
